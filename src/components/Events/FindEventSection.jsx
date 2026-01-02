@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { fetchEvents } from "../../assets/utils/http";
 import LoadingIndicator from "../UI/LoadingIndicator";
 import ErrorBlock from "../UI/ErrorBlock";
+import EventItem from "./EventItem";
 
 export default function FindEventSection() {
   const searchElement = useRef();
@@ -10,7 +11,7 @@ export default function FindEventSection() {
 
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["events", { search: searchTerm }],
-    queryFn: () => fetchEvents(searchTerm),
+    queryFn: ({ signal }) => fetchEvents({ searchTerm, signal }),
   });
 
   function handleSubmit(event) {
