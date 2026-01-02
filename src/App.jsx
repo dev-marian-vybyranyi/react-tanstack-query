@@ -9,7 +9,7 @@ import EventDetails from "./components/Events/EventDetails.jsx";
 import NewEvent from "./components/Events/NewEvent.jsx";
 import EditEvent from "./components/Events/EditEvent.jsx";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "./assets/utils/http.js";
+import { queryClient } from "./utils/http.js";
 
 const router = createBrowserRouter([
   {

@@ -4,7 +4,7 @@ import LoadingIndicator from "../UI/LoadingIndicator.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
 import EventItem from "./EventItem.jsx";
 import { useQuery } from "@tanstack/react-query";
-import { fetchEvents } from "../../assets/utils/http.js";
+import { fetchEvents } from "../../utils/http.js";
 
 export default function NewEventsSection() {
   const { data, isPending, isError, error } = useQuery({

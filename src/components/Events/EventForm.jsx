@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useQuery } from "@tanstack/react-query";
-import { fetchSelectableImages } from "../../assets/utils/http.js";
+import { fetchSelectableImages } from "../../utils/http.js";
 import ImagePicker from "../ImagePicker.jsx";
 import ErrorBlock from "../UI/ErrorBlock.jsx";
 
